@@ -1,0 +1,50 @@
+---
+question: "What is the plaintiff's name?"
+fields:
+  - no label: plaintiff_name
+---
+question: "What is the defendant's name?"
+fields:
+  - no label: defendant_name
+---
+question: What is the case number?
+fields:
+  - no label: case_no
+---
+question: What is the case division?
+fields:
+  - no label: div
+
+
+---
+question: What is the current month and day?
+fields:
+  - Day: day_now
+    datatype: integer
+  - Month: month_now
+    choices:
+      - January
+      - February
+      - March
+      - April
+      - May
+      - June
+      - July
+      - August
+      - September
+      - October
+      - November
+      - December
+
+
+---
+mandatory: true
+question: |
+  Here is your NOA.
+attachment:
+  name: Your letter
+  filename: letter
+  docx template file: Sample_NOA.docx
+  valid formats:
+    - pdf
+    - docx
